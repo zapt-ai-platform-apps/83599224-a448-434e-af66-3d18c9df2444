@@ -1,5 +1,5 @@
 import { supabase } from '../supabaseClient';
-import { Auth } from '@supabase/auth-ui-solid';
+import { Auth as SupabaseAuth } from '@supabase/auth-ui-solid';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 
 function Auth() {
@@ -15,7 +15,7 @@ function Auth() {
         >
           تعلم المزيد عن ZAPT
         </a>
-        <Auth
+        <SupabaseAuth
           supabaseClient={supabase}
           appearance={{ theme: ThemeSupa }}
           providers={['google', 'facebook', 'apple']}
